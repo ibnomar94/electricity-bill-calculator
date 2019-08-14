@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
 
             var bill: Bill = Bill(totalConsumedKw,consumptionRates)
             bill.calculatePrice()
-            CostViewArea.text = "Calculated Price is: "+ bill.getPrice()
+            CostViewArea.text =  bill.getPrice()
 
         }
     }
