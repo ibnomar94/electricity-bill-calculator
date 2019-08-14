@@ -3,7 +3,7 @@ package com.example.electricitybillcalculator
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import entities.Bill
-import entities.ConsumptionRates
+import entities.ConsumptionRate
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -22,11 +22,11 @@ class MainActivity : AppCompatActivity() {
             var totalConsumedKw: Int = intCurrentConsumption - intPreviousConsumption
 
 
-            var consumptionRates: Array<ConsumptionRates> = arrayOf(
-                    ConsumptionRates("One",0,200,0.5f,6),
-                    ConsumptionRates("Two",201,350,0.82f,11),
-                    ConsumptionRates("Three",351,650,1.0f,15),
-                    ConsumptionRates("Fourth",651,1000,1.4f,25)
+            var consumptionRates: Array<ConsumptionRate> = arrayOf(
+                    ConsumptionRate("One",0,200,0.5f,6),
+                    ConsumptionRate("Two",201,350,0.82f,11),
+                    ConsumptionRate("Three",351,650,1.0f,15),
+                    ConsumptionRate("Fourth",651,1000,1.4f,25)
                     )
 
 

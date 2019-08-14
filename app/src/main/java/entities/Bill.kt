@@ -4,13 +4,15 @@ class Bill{
     private var consumption: Int = 0
     private var calculatedConsumption: Int = 0
     private var price: Float = 0.00f
-    private var consumptionRates: Array<ConsumptionRates>
+    private var consumptionRates: Array<ConsumptionRate>
+    private var consumptionCategories: Array<ConsumptionCategory>
     private var remainingConsumptionTillTheNextRate: Int = 0
 
-    constructor(consumption: Int,consumptionRates: Array<ConsumptionRates>){
+    constructor(consumption: Int,consumptionRates: Array<ConsumptionRate>,consumptionCategories: Array<ConsumptionCategory>){
         this.consumption = consumption
         this.calculatedConsumption = consumption
         this.consumptionRates = consumptionRates
+        this.consumptionCategories = consumptionCategories
     }
 
     fun calculatePrice(){
@@ -18,16 +20,16 @@ class Bill{
         for (consumptionRate in this.consumptionRates){
             var consumedKw: Int = 0
             if(this.calculatedConsumption > 0){
-                if(this.calculatedConsumption > consumptionRate.numberOfKw){
-                    consumedKw = consumptionRate.numberOfKw
+                if(this.calculatedConsumption > consumptionRate.getNumberOfKw()){
+                    consumedKw = consumptionRate.getNumberOfKw()
                 }else{
                     consumedKw = this.calculatedConsumption
-                    this.remainingConsumptionTillTheNextRate = consumptionRate.numberOfKw - consumedKw
+                    this.remainingConsumptionTillTheNextRate = consumptionRate.getNumberOfKw() - consumedKw
                 }
-                var tempCost:Float = consumptionRate.priceRate * consumedKw
+                var tempCost:Float = consumptionRate.getPriceRate() * consumedKw
                 this.price += tempCost
                 this.calculatedConsumption -= consumedKw
-                lastMiscellaneousCost = consumptionRate.miscellaneousCost
+                lastMiscellaneousCost = consumptionRate.getMiscellaneousCost()
             }
         }
 
