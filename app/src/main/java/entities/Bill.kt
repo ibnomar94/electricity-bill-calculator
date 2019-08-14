@@ -8,7 +8,7 @@ class Bill{
     private var consumptionCategories: Array<ConsumptionCategory>
     private var remainingConsumptionTillTheNextRate: Int = 0
 
-    constructor(consumption: Int,consumptionRates: Array<ConsumptionRate>,consumptionCategories: Array<ConsumptionCategory>){
+    constructor(consumption: Int,consumptionRates: Array<ConsumptionRate>,consumptionCategories: Array<ConsumptionCategory> = emptyArray()){
         this.consumption = consumption
         this.calculatedConsumption = consumption
         this.consumptionRates = consumptionRates
