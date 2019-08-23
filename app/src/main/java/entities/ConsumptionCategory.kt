@@ -12,4 +12,16 @@ class ConsumptionCategory {
         this.consumptionRates = consumptionRates
         this.isBoundless = isBoundless
     }
+
+    fun getBoundary(): Int{
+        return this.endOfCategory
+    }
+
+    fun getConsumptionRates(): Array<ConsumptionRate>{
+        return this.consumptionRates
+    }
+
+    fun getIsBoundlessFlag(): Boolean{
+        return this.isBoundless
+    }
 }
