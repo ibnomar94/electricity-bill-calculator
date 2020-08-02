@@ -34,14 +34,14 @@ class MainActivity : AppCompatActivity() {
 
     private fun initializeConsumptionCategories(): Array<ConsumptionCategory>{
         var firstConsumptionRates: Array<ConsumptionRate> = arrayOf(
-            ConsumptionRate("1st",0,50,0.3f,1),
-            ConsumptionRate("2nd",51,100,0.40f,2)
+            ConsumptionRate("1st",0,50,0.38f,1),
+            ConsumptionRate("2nd",51,100,0.48f,2)
         )
 
         var secondConsumptionRates: Array<ConsumptionRate> = arrayOf(
-            ConsumptionRate("3rd",0,200,0.5f,6),
-            ConsumptionRate("4th",201,350,0.82f,11),
-            ConsumptionRate("5th",351,650,1.0f,15),
+            ConsumptionRate("3rd",0,200,0.65f,6),
+            ConsumptionRate("4th",201,350,0.96f,11),
+            ConsumptionRate("5th",351,650,1.18f,15),
             ConsumptionRate("6th",651,1000,1.4f,25)
         )
 
